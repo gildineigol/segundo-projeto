@@ -1,3 +1,4 @@
+import { MeuPrimeiro2Service } from './meu-primeiro2/meu-primeiro2.service';
 import { MeuPrimeiroComponent, MeuSegundoComponent } from './meu-primeiro/meu-primeiro.componente';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,7 +20,7 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
     BrowserModule,
     AppRoutingModule,
   ],
-  providers: [],
+  providers: [MeuPrimeiro2Service],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

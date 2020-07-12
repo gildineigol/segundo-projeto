@@ -1,3 +1,4 @@
+import { MeuPrimeiro2Service } from './meu-primeiro2.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,14 +10,18 @@ export class MeuPrimeiro2Component {
 
   nomePortal: string;
 
-  cursos: string[] = ['Java', 'Ext JS', 'Angular', 'HTML']
+  cursos: string[]
 
-  constructor(){
+  constructor( public meuPrimeiro2Service: MeuPrimeiro2Service){
     this.nomePortal = 'hhtp://youtube.com.br';
 
-    for (let i=0; i<this.cursos.length; i++){
-      let cursos = this.cursos[i];
-    }
+    //for (let i=0; i<this.cursos.length; i++){
+    //  let cursos = this.cursos[i];
+    //}
+
+    this.cursos = this.meuPrimeiro2Service.getCursos();
+
+  var servico = new MeuPrimeiro2Service();
 
   }
 
